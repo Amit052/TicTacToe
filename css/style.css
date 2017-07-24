@@ -1,0 +1,58 @@
+@keyframes win {
+ 
+   0% { background-color: blueviolet;}
+      25% {  background-color: white; }
+      50% { background-color: blueviolet; }
+      75% {  background-color: white; }
+      100% { background-color: blueviolet; }
+  }
+
+body,html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+#game_board td{
+ height: 1.2em;
+ width: 1.2em;
+    font-size: 4em;
+    border: 1px solid lightgrey;
+}
+
+#game_div {
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    border: 1px solid lightgrey;
+    transform: translateY(40%);
+    margin: auto;
+}
+
+#game_board {
+    display: none;
+}
+#form_table td{
+    font-size: 1.3em;
+    padding: .7em;
+}
+
+#go_btn {
+    font-size: 1.2em;
+    width: 70%;
+    margin: auto;
+}
+
+#status_table {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+.win{
+    animation: 1.2s alternate .1s 1 win;
+    background-color: blueviolet; 
+}
