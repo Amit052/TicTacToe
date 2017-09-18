@@ -50,22 +50,35 @@ document.getElementById('player2_td').innerHTML = players[1].name + ': ' + playe
      
            }
 }
+    function wsetHeight(){
+     var gb = document.getElementsByClassName('gameBtn');
+for(let i = 0 ; i < gb.length ; i++){
 
+if(typeof gb[i] != 'undefined'){
+    console.log(gb[i].style.height =  gb[i].offsetWidth + 'px');
+    
+        }
+    }
+}
  
 
 document.addEventListener("DOMContentLoaded", function(event) {  
+
     
      document.getElementById('go_btn').onclick = function(e){e.preventDefault();
  if(document.getElementById('name1_txt').value != '' && document.getElementById('name2_txt').value != '')  {
+  
      players[0].name = document.getElementById('name1_txt').value;
      players[1].name = document.getElementById('name2_txt').value;
      document.getElementById('form_table').style.display = 'none';
      document.getElementById('game_board').style.display = 'inline-table';
+     
      document.getElementById('player1_td').innerHTML = players[0].name + ': ' + players[0].score;
      document.getElementById('player2_td').innerHTML = players[1].name + ': ' + players[1].score;
      
      document.getElementById('status_table').style.display = 'inline-table';
      gameActive = true;
+        setHeight();
  }                                          
      }
   
@@ -78,8 +91,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         players[0].steps = [];
         players[1].steps = [];
  
-        console.log(players[0]);
-        console.log(players[1]);
         gameActive = true;
     };
     var gameBtn = document.getElementsByClassName('gameBtn');

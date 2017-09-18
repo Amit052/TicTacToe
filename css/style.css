@@ -13,9 +13,12 @@ body,html{
     padding: 0;
     font-size: 1em;
 }
+#game_board{
+    width: 100%;
+}
 #game_board td{
- height: 1.2em;
- width: 1.2em;
+ height: 33%;
+ width: 33%;
     font-size: 4em;
     border: 1px solid lightgrey;
 }
@@ -27,11 +30,11 @@ body,html{
 
 table {
     border: 1px solid lightgrey;
-    transform: translateY(40%);
+
     margin: auto;
 }
 
-#game_board {
+#game_board,#status_table {
     display: none;
 }
 #form_table td{
@@ -45,14 +48,13 @@ table {
     margin: auto;
 }
 
-#status_table {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
     
-}
 .win{
     animation: 1.2s alternate .1s 1 win;
     background-color: blueviolet; 
+}
+
+h1 {
+    text-align: center;
+    margin: auto;   
 }
